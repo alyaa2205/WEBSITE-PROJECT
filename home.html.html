@@ -1,0 +1,271 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Health and Wellness Week Event</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Lexend+Giga&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Lexend Giga', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('BROCHURE HAW (5).png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #4caf50;
+            padding: 20px;
+            color: white;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            color: #1e8449;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .map, iframe {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            max-width: 600px;
+        }
+
+        p, ul {
+            text-align: justify;
+            max-width: 600px;
+        }
+
+        a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .images img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .details p {
+            margin: 5px 0;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="audio 1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Play/Pause Button -->
+    <div style="position: fixed; top: 10px; right: 10px; z-index: 999;">
+        <button onclick="toggleMusic()">Play</button>
+    </div>
+
+    <script>
+        var musicPlaying = true;
+        function toggleMusic() {
+            var music = document.getElementById("background-music");
+            if (musicPlaying) {
+                music.pause();
+                musicPlaying = false;
+            } else {
+                music.play();
+                musicPlaying = true;
+            }
+        }
+    </script>
+
+<!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="#home">Home</a>
+        <a href="#directions">Directions</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#links">Related Links</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <div class="section" id="home">
+            <h1>HEALTH AND WELLNESS</h1>
+           
+            <div class="details">
+                <p><strong>Date:</strong> 25 January 2025 - 1 February 2025</p>
+                <p><strong>Time:</strong> 10:00 a.m. - 1:00 p.m.</p>
+                <p><strong>Venue:</strong> Dewan Aspirasi UiTM Dungun</p>
+            </div>
+                 <p>Join us for Health and Wellness Week, a week-long event dedicated to improving your overall well-being.</p>
+
+            <hr> <!-- Added horizontal line here -->
+
+            <p><strong>Event Highlights:</strong></p>
+            <ul>
+                <li><b>Fitness Workshops:</b> From beginner to advanced classes.</li>
+                <li><b>Wellness Talks:</b> Topics include mental health, nutrition, and healthy habits.</li>
+                <li><b>Health Screenings:</b> Free assessments and consultations.</li>
+                <li><b>Mindfulness Sessions:</b> Techniques for stress relief and mental clarity.</li>
+            </ul>
+            <p>Take part in this enriching experience and start your journey to a healthier life!</p>
+            <div class="images">
+                <img src="gif.gif" alt="GIF">
+                <img src="LOGO EVENTT.jpg" alt="Event Logo">
+            </div>
+        </div>
+
+        <div class="section" id="directions">
+            <h2>Directions</h2>
+            <p>Find us easily using the map below or follow the driving directions:</p>
+            <img src="MAP IMAGE.jpg" alt="Map" class="map">
+            <p><strong>Driving Directions:</strong></p>
+            <p>From Jalan Kuala Terengganu-Dungun (Route 3), follow signs to Dungun. Once in Dungun, follow signs to UiTM Dungun. Dewan Aspirasi is located within the campus.</p>
+            <ul>
+                <p><strong>Additional Information:</strong></p>
+                <li>Parking is available on-site at the campus, close to the venue.</li>
+                <li>Public transportation stops are nearby, including Grab and Taxis that can take you to the university campus.</li>
+                <li>Accessible entrances are available for individuals with mobility needs at Dewan Aspirasi and the campus.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="pricing">
+        <div class="section" id="pricing">
+    <h2>Pricing</h2>
+    <p>Below is the pricing information for various seating options:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Seat Type</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>General Admission</td>
+                <td>RM 10</td>
+            </tr>
+            <tr>
+                <td>VIP</td>
+                <td>RM 15</td>
+            </tr>
+            <tr>
+                <td>Student Discount</td>
+                <td>RM 8</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>For any inquiries, please email us at <a href="mailto:healthandwellness@gmail.com">healthandwellness@gmail.com</a>.</p>
+</div>
+
+        <div class="section" id="links">
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="https://www.healthline.com">Healthline - Your Health Resource</a></li>
+                <li><a href="https://www.helpguide.org/wellness">HelpGuide - Wellness</a></li>
+            </ul>
+            <iframe src="https://www.youtube.com/embed/YYaU38B7LzU?si=LbV3KokNt_Gu5MEt" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/CSjRBBqfhko?si=wbzefVI2gF8WnYbO" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <h1><marquee>Your Health is Our Priority, Let's Thrive Together!</marquee></h1>
+    </footer>
+
+</body>
+</html>
